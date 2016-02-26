@@ -37,9 +37,7 @@
         <currentPlatform>GDevelop JS platform</currentPlatform>
     </properties>
     <resources>
-        <resources>
-            <resource alwaysLoaded="false" file="../../../../games/DragShapes/circle.png" kind="image" name="circle.png" smoothed="true" userAdded="true" />
-        </resources>
+        <resources />
         <resourceFolders />
     </resources>
     <objects />
