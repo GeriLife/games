@@ -349,6 +349,51 @@
                         </event>
                     </events>
                 </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DraggableBehavior::Dragged" />
+                            <parameters>
+                                <parameter>Square</parameter>
+                                <parameter>Draggable</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Distance" />
+                                    <parameters>
+                                        <parameter>Square</parameter>
+                                        <parameter>SquareTarget</parameter>
+                                        <parameter>50</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="MettreXY" />
+                                    <parameters>
+                                        <parameter>Square</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>SquareTarget.X()</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>SquareTarget.Y()</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
             </events>
             <layers>
                 <layer name="" visibility="true">
