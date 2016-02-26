@@ -52,7 +52,7 @@
     <objectsGroups />
     <variables />
     <layouts>
-        <layout b="209" disableInputWhenNotFocused="true" mangledName="New_32scene" name="New scene" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="Main" name="Main" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
             <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="0.677491" />
             <objectsGroups />
             <variables />
@@ -258,7 +258,53 @@
                     </animations>
                 </object>
             </objects>
-            <events />
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DraggableBehavior::Dragged" />
+                            <parameters>
+                                <parameter>Circle</parameter>
+                                <parameter>Draggable</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Distance" />
+                                    <parameters>
+                                        <parameter>Circle</parameter>
+                                        <parameter>CircleTarget</parameter>
+                                        <parameter>50</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="MettreXY" />
+                                    <parameters>
+                                        <parameter>Circle</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>CircleTarget.X()</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>CircleTarget.Y()</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+            </events>
             <layers>
                 <layer name="" visibility="true">
                     <cameras>
