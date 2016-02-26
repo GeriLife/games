@@ -30,6 +30,7 @@
             <extension name="BuiltinStringInstructions" />
             <extension name="BuiltinMathematicalTools" />
             <extension name="BuiltinExternalLayouts" />
+            <extension name="DraggableBehavior" />
         </extensions>
         <platforms>
             <platform name="GDevelop JS platform" />
@@ -38,7 +39,12 @@
     </properties>
     <resources>
         <resources>
-            <resource alwaysLoaded="false" file="../../../../games/DragShapes/circle.png" kind="image" name="circle.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="images/circle.png" kind="image" name="circle.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="images/circleGrey.png" kind="image" name="circleGrey.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="images/triangle.png" kind="image" name="triangle.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="images/triangleGrey.png" kind="image" name="triangleGrey.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="images/square.png" kind="image" name="square.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="images/squareGrey.png" kind="image" name="squareGrey.png" smoothed="true" userAdded="false" />
         </resources>
         <resourceFolders />
     </resources>
@@ -47,19 +53,205 @@
     <variables />
     <layouts>
         <layout b="209" disableInputWhenNotFocused="true" mangledName="New_32scene" name="New scene" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
-            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="0.677491" />
             <objectsGroups />
             <variables />
-            <instances />
+            <instances>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CircleTarget" width="0.000000" x="603.565308" y="34.530533" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="TriangleTarget" width="0.000000" x="594.836365" y="217.342163" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="SquareTarget" width="0.000000" x="605.168518" y="413.654541" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Circle" width="0.000000" x="51.656082" y="412.178558" zOrder="4">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Triangle" width="0.000000" x="44.275955" y="29.885895" zOrder="5">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Square" width="0.000000" x="50.180084" y="229.150421" zOrder="6">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
             <objects>
                 <object name="Circle" type="Sprite">
+                    <variables />
+                    <behaviors>
+                        <behavior name="Draggable" type="DraggableBehavior::Draggable" />
+                    </behaviors>
+                    <animations>
+                        <animation useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="circle.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="79.000000" y="79.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="158.000000" />
+                                                    <vertice x="0.000000" y="158.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="CircleTarget" type="Sprite">
                     <variables />
                     <behaviors />
                     <animations>
                         <animation useMultipleDirections="false">
                             <directions>
                                 <direction looping="false" timeBetweenFrames="1.000000">
-                                    <sprites />
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="circleGrey.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="79.000000" y="79.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="158.000000" />
+                                                    <vertice x="0.000000" y="158.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Triangle" type="Sprite">
+                    <variables />
+                    <behaviors>
+                        <behavior name="Draggable" type="DraggableBehavior::Draggable" />
+                    </behaviors>
+                    <animations>
+                        <animation useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="triangle.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="90.500000" y="78.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="181.000000" y="0.000000" />
+                                                    <vertice x="181.000000" y="157.000000" />
+                                                    <vertice x="0.000000" y="157.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="TriangleTarget" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="triangleGrey.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="90.500000" y="78.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="181.000000" y="0.000000" />
+                                                    <vertice x="181.000000" y="157.000000" />
+                                                    <vertice x="0.000000" y="157.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Square" type="Sprite">
+                    <variables />
+                    <behaviors>
+                        <behavior name="Draggable" type="DraggableBehavior::Draggable" />
+                    </behaviors>
+                    <animations>
+                        <animation useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="square.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="79.000000" y="79.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="158.000000" />
+                                                    <vertice x="0.000000" y="158.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="SquareTarget" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="squareGrey.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="79.000000" y="79.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="0.000000" />
+                                                    <vertice x="158.000000" y="158.000000" />
+                                                    <vertice x="0.000000" y="158.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
                                 </direction>
                             </directions>
                         </animation>
