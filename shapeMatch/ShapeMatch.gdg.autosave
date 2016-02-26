@@ -299,12 +299,48 @@
                                     </parameters>
                                     <subActions />
                                 </action>
-                                <action>
-                                    <type inverted="false" value="Opacity" />
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DraggableBehavior::Dragged" />
+                            <parameters>
+                                <parameter>Triangle</parameter>
+                                <parameter>Draggable</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Distance" />
                                     <parameters>
-                                        <parameter>Circle</parameter>
-                                        <parameter>=</parameter>
+                                        <parameter>Triangle</parameter>
+                                        <parameter>TriangleTarget</parameter>
                                         <parameter>50</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="MettreXY" />
+                                    <parameters>
+                                        <parameter>Triangle</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>TriangleTarget.X()</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>TriangleTarget.Y()</parameter>
                                     </parameters>
                                     <subActions />
                                 </action>
