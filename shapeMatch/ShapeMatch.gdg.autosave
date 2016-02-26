@@ -434,7 +434,7 @@
                                     <parameters>
                                         <parameter>Circle</parameter>
                                         <parameter>CircleTarget</parameter>
-                                        <parameter>0</parameter>
+                                        <parameter>1</parameter>
                                         <parameter></parameter>
                                     </parameters>
                                     <subConditions />
@@ -444,7 +444,7 @@
                                     <parameters>
                                         <parameter>Triangle</parameter>
                                         <parameter>TriangleTarget</parameter>
-                                        <parameter>0</parameter>
+                                        <parameter>1</parameter>
                                         <parameter></parameter>
                                     </parameters>
                                     <subConditions />
@@ -454,7 +454,7 @@
                                     <parameters>
                                         <parameter>Square</parameter>
                                         <parameter>SquareTarget</parameter>
-                                        <parameter>0</parameter>
+                                        <parameter>1</parameter>
                                         <parameter></parameter>
                                     </parameters>
                                     <subConditions />
@@ -468,18 +468,9 @@
                             <parameters>
                                 <parameter></parameter>
                                 <parameter>Sun</parameter>
-                                <parameter>400</parameter>
-                                <parameter>600</parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="ChangePlan" />
-                            <parameters>
-                                <parameter>Sun</parameter>
-                                <parameter>=</parameter>
                                 <parameter>100</parameter>
+                                <parameter>150</parameter>
+                                <parameter></parameter>
                             </parameters>
                             <subActions />
                         </action>
