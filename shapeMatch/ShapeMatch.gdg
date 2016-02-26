@@ -422,6 +422,61 @@
                         </event>
                     </events>
                 </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::And" />
+                            <parameters />
+                            <subConditions>
+                                <condition>
+                                    <type inverted="false" value="Distance" />
+                                    <parameters>
+                                        <parameter>Circle</parameter>
+                                        <parameter>CircleTarget</parameter>
+                                        <parameter>1</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="Distance" />
+                                    <parameters>
+                                        <parameter>Triangle</parameter>
+                                        <parameter>TriangleTarget</parameter>
+                                        <parameter>1</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="Distance" />
+                                    <parameters>
+                                        <parameter>Square</parameter>
+                                        <parameter>SquareTarget</parameter>
+                                        <parameter>1</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </subConditions>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Create" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Sun</parameter>
+                                <parameter>100</parameter>
+                                <parameter>150</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
             </events>
             <layers>
                 <layer name="" visibility="true">
