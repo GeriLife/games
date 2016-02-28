@@ -56,7 +56,9 @@
         <layout b="209" disableInputWhenNotFocused="true" mangledName="Main" name="Main" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
             <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="0.677491" />
             <objectsGroups />
-            <variables />
+            <variables>
+                <variable name="victory" value="0" />
+            </variables>
             <instances>
                 <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CircleTarget" width="0.000000" x="603.565308" y="34.530533" zOrder="1">
                     <numberProperties />
@@ -327,6 +329,18 @@
                                     </parameters>
                                     <subActions />
                                 </action>
+                                <action>
+                                    <type inverted="false" value="PlaySoundCanal" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>sounds\242501__gabrielaraujo__powerup-success.wav</parameter>
+                                        <parameter>2</parameter>
+                                        <parameter>no</parameter>
+                                        <parameter>100</parameter>
+                                        <parameter>1</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
                             </actions>
                             <events />
                         </event>
@@ -369,6 +383,18 @@
                                         <parameter>TriangleTarget.X()</parameter>
                                         <parameter>=</parameter>
                                         <parameter>TriangleTarget.Y()</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlaySoundCanal" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>sounds\242501__gabrielaraujo__powerup-success.wav</parameter>
+                                        <parameter>2</parameter>
+                                        <parameter>no</parameter>
+                                        <parameter>100</parameter>
+                                        <parameter>1</parameter>
                                     </parameters>
                                     <subActions />
                                 </action>
@@ -417,6 +443,18 @@
                                     </parameters>
                                     <subActions />
                                 </action>
+                                <action>
+                                    <type inverted="false" value="PlaySoundCanal" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>sounds\242501__gabrielaraujo__powerup-success.wav</parameter>
+                                        <parameter>2</parameter>
+                                        <parameter>no</parameter>
+                                        <parameter>100</parameter>
+                                        <parameter>1</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
                             </actions>
                             <events />
                         </event>
@@ -426,56 +464,93 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
-                            <type inverted="false" value="BuiltinCommonInstructions::And" />
-                            <parameters />
-                            <subConditions>
-                                <condition>
-                                    <type inverted="false" value="Distance" />
-                                    <parameters>
-                                        <parameter>Circle</parameter>
-                                        <parameter>CircleTarget</parameter>
-                                        <parameter>1</parameter>
-                                        <parameter></parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                                <condition>
-                                    <type inverted="false" value="Distance" />
-                                    <parameters>
-                                        <parameter>Triangle</parameter>
-                                        <parameter>TriangleTarget</parameter>
-                                        <parameter>1</parameter>
-                                        <parameter></parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                                <condition>
-                                    <type inverted="false" value="Distance" />
-                                    <parameters>
-                                        <parameter>Square</parameter>
-                                        <parameter>SquareTarget</parameter>
-                                        <parameter>1</parameter>
-                                        <parameter></parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </subConditions>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>victory</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
                         </condition>
                     </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="Create" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>Sun</parameter>
-                                <parameter>100</parameter>
-                                <parameter>150</parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
+                    <actions />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="BuiltinCommonInstructions::And" />
+                                    <parameters />
+                                    <subConditions>
+                                        <condition>
+                                            <type inverted="false" value="Distance" />
+                                            <parameters>
+                                                <parameter>Circle</parameter>
+                                                <parameter>CircleTarget</parameter>
+                                                <parameter>1</parameter>
+                                                <parameter></parameter>
+                                            </parameters>
+                                            <subConditions />
+                                        </condition>
+                                        <condition>
+                                            <type inverted="false" value="Distance" />
+                                            <parameters>
+                                                <parameter>Triangle</parameter>
+                                                <parameter>TriangleTarget</parameter>
+                                                <parameter>1</parameter>
+                                                <parameter></parameter>
+                                            </parameters>
+                                            <subConditions />
+                                        </condition>
+                                        <condition>
+                                            <type inverted="false" value="Distance" />
+                                            <parameters>
+                                                <parameter>Square</parameter>
+                                                <parameter>SquareTarget</parameter>
+                                                <parameter>1</parameter>
+                                                <parameter></parameter>
+                                            </parameters>
+                                            <subConditions />
+                                        </condition>
+                                    </subConditions>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Create" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>Sun</parameter>
+                                        <parameter>100</parameter>
+                                        <parameter>150</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlaySound" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>sounds\258142__tuudurt__level-win.wav</parameter>
+                                        <parameter>no</parameter>
+                                        <parameter>100</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>victory</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>1</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
                 </event>
             </events>
             <layers>
